@@ -1,0 +1,269 @@
+body {
+    background-color: #F8F9FB;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color: rgb(53, 55, 66);
+    margin: 0px;
+}
+
+.main {
+    box-sizing: border-box;
+    max-width: 980px;
+    margin: 0px auto;
+    background-color: #ffffff;
+    padding: 10px 50px;
+    box-shadow: 9px 10px 13px -6px rgba(150,150,150,0.35);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 50px;
+    height: 100vh;
+    box-shadow: -10px 0px 13px -6px rgba(150,150,150,0.35);
+    overflow: scroll;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.userInput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 50px;
+    margin-bottom: 50px;
+    transition: height 0.15s ease-out;
+}
+
+.userInput textarea {
+    background-color: #F8F9FB;
+    border: none;
+    resize: none;
+    width: calc(100% - 30px);
+    height: 150px;
+    padding: 15px;
+    font-family: inherit;
+    font-style: italic;
+    outline: none;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.userInput textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.addInput {
+    background-color: transparent;
+    border: none;
+    font-style: italic;
+    color: rgb(143, 143, 143);
+    outline: none;
+    cursor: pointer;
+}
+
+.send {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    border: none;
+    background-color: #22ca76;;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.send::before {
+    font-family: "Material Icons";
+    content: "\e163";
+    padding-right: 10px;
+}
+
+
+.results iframe {
+    display: block;
+    border: none;
+    margin-top: 5px;
+}
+
+/* Success or failure section. Validation. */
+
+.noSongs {
+    padding: 10px;
+    background-color: rgb(238, 116, 116);
+    color: white;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.success {
+    background: linear-gradient(90deg, #70c8fa 32%, #d7f0fe 34%);
+    padding: 10px;
+}
+
+.success::after {
+    font-family: "Material Icons";
+    content: " \e313";
+    float: right;
+}
+
+.success span {
+    background-color: #d7f0fe;
+    padding: 12.4px;
+    width: 100%;
+}
+
+.successImg {
+    max-width: 25px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+/* Tutorial section */
+
+.tutorial {
+    margin: 0px auto;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}
+
+.guide {
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 9px 10px 13px -6px rgba(150,150,150,0.35);
+    cursor: pointer;
+}
+
+.guide h2 {
+    margin: 0px;;
+}
+
+.guide h2::after {
+    font-family: "Material Icons";
+    content: "\e313";
+    float: right;
+}
+
+.tutImg {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 9px 10px 13px -6px rgba(150,150,150,0.35);
+}
+
+.makePlaylist {
+    width: 300px;
+    height: 80px;
+    background-color: #b9fada;
+    cursor: pointer;
+}
+
+.playlistImg {
+    height: 80px;
+    width: 80px;
+    float: left;
+    font-family: "Material Icons";
+    font-size: 80px;
+    line-height: 80px;
+    background-color: #22ca76;
+    margin-right: 10px;
+    color: white;
+}
+
+.playlistTitle{
+    margin: 0px;
+    padding: 10px 0px 5px 0px;
+    font-weight: bold;
+}
+
+.playlistText {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.clipboard {
+    width: 1px;
+    height: 1px;
+    resize: none;
+    position: fixed;
+    left: -10px;
+}
+
+/* Modal box */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px 0px;
+    width: 600px;
+  }
+
+  .modal-content p {
+    padding: 10px 20px;
+    margin: 0px;
+  }
+
+  .modal-content h2 {
+    padding: 10px 20px;
+    margin: 0px;
+  }
+
+  .modal-content .close {
+    padding: 10px 20px;
+    margin: 0px;
+  }
+
+  .modalImg{
+      max-width: 100%;
+      margin-top: -20px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Spotify Playlists</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Compare Spotify Playlists</h1>
+    </div>
+    
+
+    <div class="main">
+        <h1>Insert a playlist</h1>
+        <p>
+            You can insert the playlists you want to compare
+            below. If you want to <br>compare even more playlists,
+            simply click the "Add another playlist" below.
+        </p>
+        <div class="userInput">
+            <div class="inputwrapper">
+                <div class="success hidden"><img src="images/checkmark.png" class="successImg"><span>Playlist added successfully!</span></div>
+                <textarea spellcheck="false" placeholder="Insert a playlist here" class="input1"></textarea>
+            </div>
+            <div class="inputwrapper">
+                <div class="success hidden"><img src="images/checkmark.png" class="successImg"><span>Playlist added successfully!</span></div>
+                <textarea spellcheck="false" placeholder="Insert a playlist here" class="input2"></textarea>
+            </div>     
+        </div>
+
+        <div class="error"></div>
+        <button class="addInput">Add another playlist</button>
+        <button class="send">COMPARE</button>
+    </div>
+
+    <div class="container">
+        <h1>How to use it</h1>
+    </div>
+
+    <div class="tutorial">
+        <div class="item">
+
+            <div class="guide">
+                <h2>Step 1</h2>
+                <div class="step">     
+                    <p>Open up Spotify and go to the playlist you want to compare.</p>
+                </div>
+            </div>
+
+            <div class="guide">
+                <h2>Step 2</h2>
+                <div class="step hidden">
+                    <p>Click on a random song within your playlist. This will mark the song you clicked on.</p>
+                </div>
+            </div>
+            <div class="guide">
+                <h2>Step 3</h2>
+                <div class="step hidden">
+                    <p>Press Ctrl+A to mark every song on the playlist. Now press Ctrl+C to copy all of them. The last step is to press Ctrl+V in the input field on this website.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="item tutImages">
+            <img class="tutImg" src="images/default.png">
+            <img class="tutImg hidden" src="images/single.png">
+            <img class="tutImg hidden" src="images/selected.png">
+        </div>
+    </div>
+    
+    <div class="sidebar hidden">
+        <h1>You both like..</h1>
+        <p>
+            All the songs you have in common
+            will be displayed here. From here,
+            you can easily create a playlist with
+            all the songs you have in common. 
+        </p>
+        <div class="makePlaylist">
+            <div class="playlistImg">&#xe039;</div>
+            <p class="playlistTitle">CREATE PLAYLIST</p>
+            <p class="playlistText">Create a playlist with all the songs you have in common</p>
+        </div>
+        <div class="results"></div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <img class="modalImg" src="images/howto.gif">
+          <span class="close">&times;</span>
+          <h2>Your new playlist is almost ready!</h2>
+          <p>Open up Spotify and create a new Playlist. Navigate to the playlist you just created. Now, all you need to do is press Ctrl+V and all the songs will appear in your playlist!</p>
+          <p>Thanks for using this service!</p>
+        </div>
+      
+      </div>
+
+    <textarea class="clipboard"></textarea>
+    
+    
+</body>
+</html>
